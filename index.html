@@ -34,7 +34,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '4156654498';
+    var serviceWorkerVersion = '3214047445';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -47,8 +47,9 @@
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
+        
         onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
+          engineInitializer.initializeEngine({renderer: "canvaskit"}).then(function(appRunner) {
             appRunner.runApp();
           });
         }
